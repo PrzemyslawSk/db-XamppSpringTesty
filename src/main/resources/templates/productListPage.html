@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Product list</title>
+    <link rel="stylesheet" type="text/css" href="addMenuPage.css">
+</head>
+<body>
+
+<a href="/index" class="button1">Back</a>
+<div  class="navigation">
+
+ <!--   <div th:each="product  : ${productKey}">
+        <div th:text="'ID: '+${product.id}"></div>
+        <div th:text="'Name: '+${product.name}"></div>
+        <div th:text="'Category: '+${product.category}"></div>
+        <div th:text="'Price: '+${product.price}"></div>
+        <div th:text="'Quantity: '+${product.quantity}"></div>
+    </div>-->
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+
+        <div th:each="product : ${productKey}">
+
+            <tr>
+                <td><div th:text="${product.id}"></div></td>
+                <td>
+                    <div th:if="${product.ALARM >= product.quantity}">
+                        <div style="color: #FF0000" th:text="${product.name}"></div>
+                    </div>
+                    <div th:if="${product.ALARM < product.quantity}">
+                        <div th:text="${product.name}"></div>
+                    </div>
+                </td>
+                <td><div th:text="${product.category}"></div></td>
+                <td><div th:text="${product.price}"></div></td>
+                <td><div th:text="${product.quantity}"></div></td>
+            </tr>
+        </div>
+    </table>
+</div>
+</body>
+</html>

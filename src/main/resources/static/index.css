@@ -1,0 +1,137 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background: #b08331;
+}
+
+.navigation
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.navigation ul
+{
+    position: relative;
+}
+
+.navigation ul li
+{
+    text-align: center;
+    list-style: none;
+}
+
+.navigation ul li a
+{
+    color: #696969;
+    text-decoration: none;
+    font-size: 3em;
+    padding: 5px 20px;
+    display: inline-flex;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.navigation ul:hover li a
+{
+    color: #000;
+}
+
+.navigation ul li:hover a
+{
+    color: #000;
+    background: #ebab34;
+    display:inline-block;
+    padding:0.2em 3em;
+    margin:0  0.5em 0.5em 0;
+    border:0.6em solid rgba(255,255,255,0);
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-size: 1.5em;
+    font-weight:300;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    text-align:center;
+    transition: all 0.2s;
+}
+a.button:hover{
+    border-color: rgba(153,127,102,1);
+}
+@media all and (max-width:30em){
+    a.button{
+        display:block;
+        margin:0.2em auto;
+    }
+}
+
+
+.navigation ul li a:before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    color: rgba(0,0,0,.1);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 500px;
+    transition: letter-spacing 0.5s, left 0.5s;
+}
+
+.navigation ul li a:hover:before
+{
+    contnt: attr(data-text);
+    opacity: 1;
+    left: 50%;
+    letter-spacing: 10px;
+    width: 1800px;
+    height: 1800px;
+}
+
+.navigation ul li:nth-child(6n+1) a:before
+{
+    background: #ebb552;
+    transition: 0.5s;
+}
+.navigation ul li:nth-child(6n+2) a:before
+{
+    background: #e8c69e;
+    transition: 0.5s;
+}
+.navigation ul li:nth-child(6n+3) a:before
+{
+    background: #d1ac80;
+    transition: 0.5s;
+}
+.navigation ul li:nth-child(6n+4) a:before
+{
+    background: #c7a35f;
+    transition: 0.5s;
+}
+.navigation ul li:nth-child(6n+5) a:before
+{
+    background: #a88459;
+    transition: 0.5s;
+}
+.navigation ul li:nth-child(6n+6) a:before
+{
+    background: #85633a;
+    transition: 0.5s;
+}
